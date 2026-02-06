@@ -17,7 +17,7 @@ Quick availability overview of all currently indexed datasets:
 ![DataSet%206](https://img.shields.io/badge/DataSet%206-53.0%20MB%20%7C%20Available-brightgreen?style=for-the-badge)
 ![DataSet%207](https://img.shields.io/badge/DataSet%207-98.2%20MB%20%7C%20Available-brightgreen?style=for-the-badge)
 ![DataSet%208](https://img.shields.io/badge/DataSet%208-10.67%20GB%20%7C%20Available-brightgreen?style=for-the-badge)
-![DataSet%209](https://img.shields.io/badge/DataSet%209-49%20GB%20%2F%20180%20GB%20%7C%20Incomplete-orange?style=for-the-badge)
+![DataSet 9](https://img.shields.io/badge/DataSet%209-96.25%20GB%20%2F%20180%20GB%20%7C%20Incomplete-orange?style=for-the-badge)
 ![DataSet%2010](https://img.shields.io/badge/DataSet%2010-~82%20GB%20%7C%20Available-brightgreen?style=for-the-badge)
 ![DataSet%2011](https://img.shields.io/badge/DataSet%2011-~27.5%20GB%20%7C%20Available-brightgreen?style=for-the-badge)
 ![DataSet%2012](https://img.shields.io/badge/DataSet%2012-114.1%20MB%20%7C%20Available-brightgreen?style=for-the-badge)
