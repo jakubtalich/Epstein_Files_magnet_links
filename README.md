@@ -5,7 +5,6 @@
 Quick availability overview of all currently indexed datasets:
 
 ![Release](https://img.shields.io/badge/Release-Jan%2030%2C%202026-black?style=for-the-badge)
-![Community](https://img.shields.io/badge/Community-Torrents%20%2B%20Internet%20Archive-purple?style=for-the-badge)
 
 ![DataSet%201](https://img.shields.io/badge/DataSet%201-2.47%20GB%20%7C%20Available-brightgreen?style=for-the-badge)
 ![DataSet%202](https://img.shields.io/badge/DataSet%202-631.6%20MB%20%7C%20Available-brightgreen?style=for-the-badge)
