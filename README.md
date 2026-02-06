@@ -2,8 +2,6 @@
 
 ## <a id="dataset-status-dashboard"></a>Dataset Status Dashboard
 
-Quick availability overview of all currently indexed datasets:
-
 ![Release](https://img.shields.io/badge/Release-Jan%2030%2C%202026-black?style=for-the-badge)
 
 ![DataSet%201](https://img.shields.io/badge/DataSet%201-2.47%20GB%20%7C%20Available-brightgreen?style=for-the-badge)
