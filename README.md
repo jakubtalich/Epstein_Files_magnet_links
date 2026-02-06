@@ -17,7 +17,7 @@ Quick availability overview of all currently indexed datasets:
 ![DataSet%206](https://img.shields.io/badge/DataSet%206-53.0%20MB%20%7C%20Available-brightgreen?style=for-the-badge)
 ![DataSet%207](https://img.shields.io/badge/DataSet%207-98.2%20MB%20%7C%20Available-brightgreen?style=for-the-badge)
 ![DataSet%208](https://img.shields.io/badge/DataSet%208-10.67%20GB%20%7C%20Available-brightgreen?style=for-the-badge)
-![DataSet 9](https://img.shields.io/badge/DataSet%209-96.25%20GB%20%2F%20180%20GB%20%7C%20Incomplete-orange?style=for-the-badge)
+![DataSet%209](https://img.shields.io/badge/DataSet%209-96.25%20GB%20%7C%20~99.5%25%20Reconstructed-orange?style=for-the-badge)
 ![DataSet%2010](https://img.shields.io/badge/DataSet%2010-~82%20GB%20%7C%20Available-brightgreen?style=for-the-badge)
 ![DataSet%2011](https://img.shields.io/badge/DataSet%2011-~27.5%20GB%20%7C%20Available-brightgreen?style=for-the-badge)
 ![DataSet%2012](https://img.shields.io/badge/DataSet%2012-114.1%20MB%20%7C%20Available-brightgreen?style=for-the-badge)
@@ -48,6 +48,7 @@ https://old.reddit.com/r/DataHoarder/comments/1qrk3qk/epstein_files_datasets_9_1
 * [How to Torrent the Magnet Links](#how-to-torrent-the-magnet-links)
 * [Hash Verification](#hash-verification)
 * [Notes on Data Set 9](#notes-on-data-set-9)
+* [How to Compile a Mostly Complete Data Set 9](#ds9-reconstruction)
 * [Datasets](#datasets)
   * [Quick Jumps](#quick-jumps)
   * [Data Sets 1–8 (Internet Archive)](#data-sets-1-8-internet-archive)
@@ -221,14 +222,65 @@ Compare output to the hash listed in this repo.
 
 ## <a id="notes-on-data-set-9"></a>Notes on Data Set 9
 
-⚠ **Data Set 9 is currently incomplete.** ⚠
+⚠ **Data Set 9 has historically been incomplete / unstable via DOJ direct download** (many reports of cutoff around ~49 GB / 180 GB).
 
-Multiple users report the DOJ download cuts off around:
+**Update:** As of early Feb 2026, community reconciliation using the dataset metadata files (`.DAT` / `.OPT`) indicates Data Set 9 is now **~99.5% reconstructable** from currently circulating sources.
 
-* **49 GB of 180 GB**
-* server offset `48995762176`
+### What “~99.5%” means (high-level)
 
-Torrent mirrors are still being updated as more complete copies appear.
+- The dataset appears to contain **~531,307** expected `IMAGES` entries (PDF) based on `.DAT`.
+- Current merged sources yield **~531,282** PDF files.
+- That implies **~25 PDFs** remain missing.
+- Additional missing content is believed to be `NATIVES` (media such as audio/video) — on the order of **~135 files** (estimate may change).
+- The remaining “missing size” is therefore likely **not PDFs**, but mostly `NATIVES`.
+
+> **Important:** This repo does not claim Data Set 9 is fully complete or canonical.  
+> It documents the best-known public reconstruction status at the time of writing.
+
+---
+
+## <a id="ds9-reconstruction"></a>How to Compile a Mostly Complete Data Set 9 (Reconstruction)
+
+This is a **best-effort reconstruction workflow** for building the most complete DS9 currently available from public sources.
+
+### Sources currently used for reconstruction
+
+You may see DS9 in multiple partial forms:
+
+- **DOJ direct ZIP (often cuts off around ~49 GB)**
+- **Community “more complete” DS9 tarball (~96.25 GB, deduplicated merge)**
+- **Internet Archive mirrors (where available)**
+- **Other partial torrents (various sizes, unverified)**
+
+### Recommended approach (practical + reproducible)
+
+1) **Choose a target folder** (example):
+   - `dataset-09_reconstructed/`
+
+2) **Extract the most complete archive first**
+   - Start with the **largest / deduplicated** DS9 archive you have (e.g., the ~96.25 GB community merge).
+   - Extract it into `dataset-09_reconstructed/`
+
+3) **Overlay additional sources**
+   - Extract other DS9 variants (including the DOJ partial ZIP if you have it) **on top of** the same folder.
+   - When prompted, choose:
+     - **Skip existing files** (preferred)
+     - or **overwrite only if the incoming file is larger** (optional, manual)
+
+4) **De-duplicate by filename + size**
+   - Many files are duplicated across sources. If multiple copies exist, keep one copy only.
+   - (Advanced users may de-dupe by SHA256, but filename/size de-dupe is often sufficient for initial cleanup.)
+
+5) **(Optional) Keep a “raw sources” folder**
+   - Keep original archives untouched in a separate directory so your reconstruction folder stays clean.
+
+### Verification (recommended)
+
+- If a trusted `SHA256SUMS` manifest is published for a given DS9 reconstruction, verify using:
+  - Linux/macOS: `sha256sum -c SHA256SUMS.txt`
+  - Windows PowerShell: `Get-FileHash` (see Hash Verification section)
+
+> **Note:** DS9 reconstruction is evolving. Avoid labeling your merged output as “complete” unless you can verify against a known-good manifest.
 
 ---
 
@@ -424,7 +476,9 @@ Unverified version incomplete at **~101 GB**.
   ```
 
 /u/susadmin’s More Complete Data Set 9 (96.25 GB)
-⚠️⚠️⚠️ https://www.nytimes.com/2026/02/01/us/nude-photos-epstein-files.html ⚠️⚠️⚠️
+
+Note (may be relevant to DS9 availability & redactions):
+https://www.nytimes.com/2026/02/01/us/nude-photos-epstein-files.html
 
 * **Torrent magnet (⚠ De-duplicated merger of (45.63 GB + 86.74 GB) versions ⚠):** **[TORRENT MAGNET](magnet:?xt=urn:btih:7ac8f771678d19c75a26ea6c14e7d4c003fbf9b6&dn=dataset9-more-complete.tar.zst&xl=96148724837&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=http%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Fwepzone.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker1.myporn.club%3A9337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.theoks.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.srv00.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qu.ax%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.alaskantf.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-udp.gbitt.info%3A80%2Fannounce&tr=udp%3A%2F%2Frun.publictracker.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentracker.io%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.dstud.io%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.zhuqiy.com)**
 
