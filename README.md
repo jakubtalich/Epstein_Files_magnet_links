@@ -143,7 +143,7 @@ Quick availability overview of all currently indexed datasets:
 ### <a id="data-set-9-incomplete"></a>Data Set 9 (Incomplete)
 
 
-Only contains **49 GB** of **180 GB**. Multiple reports of cutoff from DOJ server at offset **48995762176**.
+Only contains **49 GB** of **180 GB**.
 
 
 * **Torrent magnet (⚠ Incomplete - 49 GB / 180 GB ⚠):** **[TORRENT MAGNET LINK](magnet:?xt=urn:btih:0a3d4b84a77bd982c9c2761f40944402b94f9c64&dn=DataSet9-incomplete.zip&xl=48995762176&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce)**
